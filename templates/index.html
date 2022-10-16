@@ -6,13 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-    
+    <link rel="stylesheet" href="./style.css">
     <title>Depression Prediction webapp</title>
 
     <link rel="icon" type="image/png" href="../static/images/bg_1.jpg">
     
-    <style>
-        *,
+<style>
+    *,
 ::after,
 ::before {
     padding: 0;
@@ -21,19 +21,19 @@
 }
 
 html {
-scroll-behavior: smooth;
-font-size: 100%;
+    scroll-behavior: smooth;
+    font-size: 100%;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     width: 10px;
 }
 
-::-webkit-scrollbar-track{
+::-webkit-scrollbar-track {
     background: #fdf4f9;
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
     background: #e06238;
     border-radius: 5px;
 }
@@ -56,7 +56,7 @@ body {
 }
 
 .head {
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../static/images/bg_2.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../static/images/bg_2.jpg');
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -118,7 +118,7 @@ h1 {
     margin-bottom: 20px;
 }
 
-.cell{
+.cell {
     border: rgba(0, 0, 0, 0.2) 1px solid;
     margin: .5rem 0;
     padding: .5rem;
@@ -127,7 +127,8 @@ h1 {
     width: 100%;
 }
 
-.cell>select,input{
+.cell>select,
+input {
     width: 100%;
     margin-top: .7rem;
     height: 35px;
@@ -148,7 +149,7 @@ label {
     width: 100%;
 }
 
-#base{
+#base {
     width: 100%;
     justify-content: space-between;
     display: flex;
@@ -164,7 +165,7 @@ label {
     border: 0;
 }
 
-.submit{
+.submit {
     color: #e06238;
     background-color: #fff;
 }
@@ -191,17 +192,16 @@ label {
     font-size: 20px;
 }
 
-#pred>label{
+#pred>label {
     font-size: 1rem;
 }
 
-#pred > p{
+#pred>p {
     border: #000 1px solid;
     color: #000;
     font-size: .9rem;
     font-weight: 700;
     padding: 5px 10px;
-    display: none;
 }
 
 footer {
@@ -224,10 +224,11 @@ ul {
     text-align: justify;
 }
 
-.footer .grid{
+.footer .grid {
     margin-bottom: 7rem;
 }
-.grid .col{
+
+.grid .col {
     border-radius: 10px;
     padding: 1rem;
 }
@@ -236,33 +237,183 @@ ul {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-h3{
+h3 {
     color: #e06238;
 }
 
-p, a{
+p,
+a {
     font-size: 1rem;
 }
 
-a{
+a {
     text-decoration: none;
     color: #fff;
 }
 
-a:hover{
+a:hover {
     color: #e06238;
     transition: .3s ease-in-out;
 }
 
-.col ul{
+.col ul {
     list-style-type: none;
 }
 
-.text-center{
+.text-center {
     font-size: .9rem;
 }
 
-    </style>
+/* ####### Responsive design for Mini desktop starts here ###### */
+@media screen and (min-width: 901px) and (max-width: 1024px) {
+    .container{
+        width: 90%;
+    }
+
+    h1{
+        text-align: left;
+    }
+
+    footer {
+            height: 70vh;
+        }
+         .footer {
+            padding-top: 1rem;
+        }
+    
+        .footer .grid {
+            margin-bottom: 1rem;
+        }
+    
+        .grid .col {
+            padding: 1rem;
+        }
+}
+
+/* ####### Responsive design for Tablets starts here ###### */
+@media screen and (min-width: 600px) and (max-width: 900px) {
+
+    .head {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../static/images/bg_2.jpg');
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            margin-top: 0;
+            /* justify-content: center; */
+            /* box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5); */
+        }
+    
+        h1 {
+            font-size: 3rem;
+            text-align: left;
+        }
+    
+        .grid {
+            grid-template-columns: 1fr;
+            grid-gap: 10px;   
+        }
+    
+        #pred {
+            width: 70%;
+        }
+    
+        footer {
+            height: 100vh;
+        }
+         .footer {
+            padding-top: 1rem;
+        }
+    
+        .footer .grid {
+            margin-bottom: 1rem;
+        }
+    
+        .grid .col {
+            padding: 1rem;
+        }
+       
+}
+
+
+/* ####### Responsive design for mobile devices starts here ###### */
+
+@media screen and (min-width: 300px) and (max-width: 599px) {
+
+    .container{
+        width: 90%;
+    }
+
+    .head {
+            background-position: center;
+        }
+    .tag{
+        margin-top: 8rem;
+    }
+    
+        #name {
+            font-size: 1.4rem;
+        }
+    
+        h1 {
+            font-size: 1.7rem;
+            text-align: left;
+        }
+
+    .intro{
+        line-height: 1.5;
+    }
+    
+        .grid {
+            grid-template-columns: 1fr;
+            grid-gap: 7px;
+        }
+    
+       
+    
+        #base {
+            padding: 5px 10px;
+        }
+    
+        .btn {
+            padding: 7px 30px;
+        }
+    
+        
+    
+        #pred {
+            width: 100%;
+        }
+    
+        footer {
+            height: 75vh;
+        }
+    
+        ul {
+            font-size: .8rem;
+        }
+    
+        .footer {
+            padding-top: 1rem;
+        }
+    
+        .footer .grid {
+            margin-bottom: 1rem;
+        }
+    
+        .grid .col {
+            padding: 1rem;
+        }
+    
+        p,
+        a {
+            font-size: .8rem;
+        }
+    }
+</style>
 </head>
 
 <body>
@@ -583,7 +734,7 @@ a:hover{
             </p>
         </footer>
     </div>
-<script>
+<!-- <script>
     let btn = document.getElementById('btn');
         let textToShow = document.getElementById('text');
 
@@ -597,7 +748,7 @@ a:hover{
             }
         })
 
-</script>
+</script> -->
 
 </body>
 
