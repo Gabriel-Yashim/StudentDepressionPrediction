@@ -44,7 +44,7 @@ body {
 }
 
 .container {
-    width: 80%;
+    width: 90%;
     padding-top: 15px;
     padding-right: 10px;
     padding-left: 10px;
@@ -208,14 +208,18 @@ footer {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 70vh;
+    height: 100vh;
     background-attachment: scroll;
     color: #fff;
     position: relative;
 }
 
-ul {
-    font-size: 20px;
+footer ul {
+    font-size: 16px;
+}
+
+footer li{
+    padding: 5px 0px;
 }
 
 .footer {
@@ -229,7 +233,7 @@ ul {
 
 .grid .col {
     border-radius: 10px;
-    padding: 1rem;
+    padding: 10px 25px;
 }
 
 .col:hover {
@@ -255,7 +259,7 @@ a:hover {
     transition: .3s ease-in-out;
 }
 
-.col ul {
+.col #none {
     list-style-type: none;
 }
 
@@ -274,7 +278,7 @@ a:hover {
     }
 
     footer {
-            height: 70vh;
+            height: 90vh;
         }
          .footer {
             padding-top: 1rem;
@@ -388,24 +392,25 @@ a:hover {
         }
     
         footer {
-            height: 75vh;
+            height: 100vh;
         }
     
-        ul {
+        ul li {
             font-size: .8rem;
         }
     
         .footer {
-            padding-top: 1rem;
+            padding-top: .5rem;
         }
     
         .footer .grid {
-            margin-bottom: 1rem;
+            margin-bottom: .5rem;
         }
     
         .grid .col {
-            padding: 1rem;
+            padding: .5rem 1rem;
         }
+        
     
         p,
         a {
@@ -420,7 +425,7 @@ a:hover {
        <div class="container">
         <div class="tag">
             <h1>Student Depression Prediction</h1>
-            <p id="name">By <br> Mariam Seme</p>
+            <p id="name">By <br>Ahmed Mariam Seme</p>
         </div>
        </div>
     </section>
@@ -429,10 +434,11 @@ a:hover {
         <!-- <div class="container"> -->
             <div class="intro">
                 <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis expedita eos non omnis debitis
-                    dolorum dolor minus qui soluta? Error assumenda neque, rerum libero blanditiis recusandae magni minus
-                    perferendis laborum?. <br> <br>
-                    All you need to do is fill the form below:
+                    While mental health issue in the school may always be present to some extent, it is preventable in most cases from
+                    occurring at all or the least reduced in their impact through Promotion, Prevention, and Early Intervention (PPEI).
+                    This system was developed to alleviate the challenge student experienced around mental health and how to check-in and
+                    support each other during times of strain. <br> <br>
+                    To interact with the pretrained model, all you need to do is fill the form below:
                 </p>
             
             </div>
@@ -448,7 +454,7 @@ a:hover {
                                         Your
                                         Age
                                         Range:</label> <br>
-                                <select name="age">
+                                <select name="age" required='required'>
                                     <option value="">Select</option>
                                     <option value="0">16-20</option>
                                     <option value="1">21-25</option>
@@ -457,13 +463,21 @@ a:hover {
                                     <option value="4">35-40</option>
                                 </select>
                             </p>
-                            <p class="cell"><label 
-                                        for="">Enter
+                            <p class="cell">
+                                <label 
+                                        for="">Select
                                         Your
-                                        Level:</label> <br>
-                                
-                                <input  type="number" placeholder="E.g 100,200,300,400" required='required'
-                                    name="level">
+                                        Level:
+                                </label> <br>
+
+                                <select name="level" id="" required='required'>
+                                    <option value="">Select</option>
+                                    <option value="100">100 level</option>
+                                    <option value="200">200 level</option>
+                                    <option value="300">300 level</option>
+                                    <option value="400">400 level</option>
+                                </select>
+
                             </p>
                         
                                 
@@ -475,7 +489,7 @@ a:hover {
                                         used
                                         a self <br> asessment tool on depression in the past?</label> <br>
                                 
-                                <select name="used">
+                                <select name="used" required='required'>
                                     <option value="">Select</option>
                                     <option value="1">No</option>
                                     <option value="2">Yes</option>
@@ -491,7 +505,7 @@ a:hover {
                                         have
                                         little
                                         interest or pleasure <br> in doing things?</label> <br>
-                                <select name="lack">
+                                <select name="lack" required='required'>
                                     <option value="">Select</option>
                                     <option value="0">Not at all</option>
                                     <option value="1">Several days</option>
@@ -507,7 +521,7 @@ a:hover {
                                         have
                                         Trouble falling asleep,<br> staying asleep, or sleeping too much?:</label> <br>
                                 
-                                <select name="sleep">
+                                <select name="sleep" required='required'>
                                     <option value="">Select</option>
                                     <option value="0">Not at all</option>
                                     <option value="1">Several days</option>
@@ -526,7 +540,7 @@ a:hover {
                                         Feel
                                         Tired
                                         or Feel like you have <br> little energy?</label> <br>
-                                <select name="tired">
+                                <select name="tired" required='required'>
                                     <option value="">Select</option>
                                     <option value="0">Not at all</option>
                                     <option value="1">Several days</option>
@@ -542,7 +556,7 @@ a:hover {
                                         Poor
                                         appetite or over eating?</label> <br>
                                 
-                                <select name="appetite">
+                                <select name="appetite" required='required'>
                                     <option value="">Select</option>
                                     <option value="0">Not at all</option>
                                     <option value="1">Several days</option>
@@ -556,7 +570,7 @@ a:hover {
                                         you
                                         Feeling
                                         bad about yourself?</label> <br>
-                                <select name="bad">
+                                <select name="bad" required='required'>
                                     <option value="">Select</option>
                                     <option value="0">Not at all</option>
                                     <option value="1">Several days</option>
@@ -576,7 +590,7 @@ a:hover {
                                         in
                                         class?
                                     </label> <br>
-                                <select name="concentrate">
+                                <select name="concentrate" required='required'>
                                     <option value="">Select</option>
                                     <option value="0">Not at all</option>
                                     <option value="1">Several days</option>
@@ -592,7 +606,7 @@ a:hover {
                                         act
                                         fidgety
                                         or restless?</label> <br>
-                                <select name="restless">
+                                <select name="restless" required='required'>
                                     <option value="">Select</option>
                                     <option value="0">Not at all</option>
                                     <option value="1">Several days</option>
@@ -612,7 +626,7 @@ a:hover {
                                         Thoughts that you would be better off dead or of hurting yourself in some
                                         way?</label> <br>
                         
-                                <select name="death">
+                                <select name="death" required='required'>
                                     <option value="">Select</option>
                                     <option value="0">Not at all</option>
                                     <option value="1">Several days</option>
@@ -627,7 +641,7 @@ a:hover {
                                         ever
                                         had
                                         an anxiety attack?</label> <br>
-                                <select name="attack">
+                                <select name="attack" required='required'>
                                     <option value="">Select</option>
                                     <option value="1">No</option>
                                     <option value="2">Yes</option>
@@ -640,7 +654,7 @@ a:hover {
                                         you
                                         been
                                         diagnosed with any form of depression in the past?</label> <br>
-                                <select name="diagnosed" required>
+                                <select name="diagnosed" required='required'>
                                     <option>Select</option>
                                     <option value="1">No</option>
                                     <option value="2">Yes</option>
@@ -698,13 +712,23 @@ a:hover {
                 <div class="grid">
                     <div class="col">
                         <h3>Let's Talk</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam aperiam fugit reiciendis
-                            corrupti, velit optio, quas commodi, dicta ab itaque eveniet delectus voluptates? Qui
-                            consequuntur odit vitae, eveniet repellat enim!</p>
+                        <p>The key elements to an effective strategy for prevention are the following:</p>
+                        
+                        <ul>
+                            <li>Building awareness for the individual.</li>
+                            
+                            <li>Identifying issues at early stage and seeing the trends of individuals.</li>
+                            
+                            <li>Building a trusted support network to address challenges before they become issues.</li>
+                            
+                            <li>Check-in more regularly and providing invited support to those under strain in the time of need.</li>
+                            
+                            <li>Creating a psychologically safe culture where it is ok to be vulnerable and invite support.</li>
+                        </ul>
                     </div>
                     <div class="col">
                         <h3>Let's Connect</h3>
-                        <ul>
+                        <ul id="none">
                             <li>
                                 <a href="#">Data Analytics</a></li>
                             <li>
@@ -720,10 +744,15 @@ a:hover {
                         </ul>
                     </div>
                     <div class="col">
-                        <h3>Quotes</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea optio cumque, ratione totam
-                            aliquam tenetur perspiciatis tempore, nam recusandae fugit nulla neque repellendus,
-                            praesentium laboriosam facere laborum illo distinctio iste!</p>
+                        <h3>Did you know?</h3>
+                        <ul>
+                            <li>Depression Is More Than Ordinary Sadness</li>
+                            
+                            <li>About 1 in 10 men and 2 in 10 women will have a major episodes of depression at some point in their lives.</li>
+                            
+                            <li>Depression can negatively affect how you feel, how you think, and how you act.</li>
+                        </ul>
+                        
                     </div>
                 </div>
             </div>
