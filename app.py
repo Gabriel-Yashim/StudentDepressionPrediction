@@ -39,7 +39,7 @@ def predict():
     
      output = prediction[0]
      
-     return render_template('index.html', Score_num=score, prediction_text=output)
+     return render_template('results.html', Score_num=score, prediction_text=output)
      
 
 if __name__ == "__main__":
