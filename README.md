@@ -4,4 +4,5 @@ While mental health issue in the school may always be present to some extent, it
 This system was developed to alleviate the challenge student experienced around mental health and how to check-in and support each other during times of strain.
 ### Scope: Federal University Lokoja
 
-## Deployed here: https://studentdepressionprediction.streamlit.app/
+## Deployed here: 
+<a href="https://studentdepressionprediction.streamlit.app/">Student Depression Prediction WebApp</a>
